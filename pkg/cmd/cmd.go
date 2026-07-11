@@ -30,6 +30,8 @@ func Start(t *db.Training) {
 			util.PressAnyKey()
 		case "undo":
 			t.Undo()
+		case "history", "h":
+			t.PrintHistory()
 		case "unmount":
 			if err := util.UnmountDrive(); err != nil {
 				fmt.Println(err)

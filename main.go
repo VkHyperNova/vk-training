@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"log"
 	"os"
@@ -43,7 +42,6 @@ const (
 )
 
 var (
-	stdin      = bufio.NewReader(os.Stdin)
 	LocalFile  = filepath.Join(baseLocal, baseDB, file)
 	BackupFile = filepath.Join(driveMountPoint, baseLocal, baseDB, file)
 )

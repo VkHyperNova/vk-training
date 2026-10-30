@@ -80,17 +80,16 @@ func main() {
 			fmt.Print(usage)
 			os.Exit(1)
 		}
+	}
 
-		t.PrintDashboard()
+	t.Report()
 
-		for _, n := range notices {
-			fmt.Println(Yellow + n + Reset)
-		}
+	for _, n := range notices {
+		fmt.Println(Yellow + n + Reset)
+	}
 
-		if err != nil {
-			fmt.Printf("%serror: %v%s\n", Red, err, Reset)
-			os.Exit(1)
-		}
-
+	if err != nil {
+		fmt.Printf("%serror: %v%s\n", Red, err, Reset)
+		os.Exit(1)
 	}
 }
